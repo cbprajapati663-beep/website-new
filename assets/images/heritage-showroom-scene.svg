@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Cinematic Heritage Auto Finance showroom with luxury SUV">
+<defs>
+ <linearGradient id="night" x2="1" y2="1"><stop stop-color="#080812"/><stop offset=".48" stop-color="#1b1030"/><stop offset="1" stop-color="#090811"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#211536"/><stop offset=".55" stop-color="#24172d"/><stop offset="1" stop-color="#080912"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff0b0"/><stop offset=".35" stop-color="#f4c25b"/><stop offset="1" stop-color="#9a5c1e"/></linearGradient>
+ <linearGradient id="car" x2="0" y2="1"><stop stop-color="#3e3b49"/><stop offset=".3" stop-color="#171923"/><stop offset=".75" stop-color="#06070c"/><stop offset="1" stop-color="#25212b"/></linearGradient>
+ <linearGradient id="wind" x2=".2" y2="1"><stop stop-color="#a7b4d1" stop-opacity=".75"/><stop offset="1" stop-color="#1c1b2b" stop-opacity=".9"/></linearGradient>
+ <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#1b1427"/><stop offset="1" stop-color="#05060b"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#b35bff" stop-opacity=".35"/><stop offset="1" stop-color="#7b32c6" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+ <filter id="shadow"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#night)"/>
+<ellipse cx="1050" cy="360" rx="660" ry="440" fill="url(#glow)"/>
+<!-- distant city -->
+<g fill="#100e20" opacity=".96">
+ <path d="M0 355V190h48v-36h16v36h22v165M96 355V245h48v-50h14v50h25v-85h24v85h18v110M245 355V140h36v-48h9v48h30v215M330 355V220h42v-60h17v60h28v135M432 355V170h48v-75h16v75h28v185M540 355V205h38v-55h14v55h23v150M625 355V140h54v-60h12v60h22v215"/>
+ <path d="M0 355V260h60v95M720 355V200h50v-80h18v80h24v155M830 355V170h46v-40h15v40h24v185M950 355V220h36v-72h17v72h24v135M1090 355V180h50v-70h14v70h28v175M1200 355V235h40v-55h16v55h26v120M1320 355V190h55v-85h16v85h24v165M1450 355V245h44v-70h14v70h48v110"/>
+</g>
+<g fill="#d49bff" opacity=".5">
+ <path d="M110 225h5v6h-5zm18 0h5v6h-5zm154-102h5v7h-5zm28 18h5v7h-5zm155 53h5v7h-5zm22-25h5v7h-5zm170 0h5v7h-5zm230 9h5v7h-5zm225-20h5v7h-5z"/>
+</g>
+<!-- luxury showroom -->
+<path d="M420 400 730 170 1510 120 1600 175V590H420Z" fill="#0a0a13" stroke="#a66b2d" stroke-width="3"/>
+<path d="M440 400 740 193 1492 145 1570 184V562H440Z" fill="url(#glass)" stroke="#f4c15b" stroke-opacity=".7" stroke-width="2"/>
+<path d="M740 193 1492 145M440 400 740 193" fill="none" stroke="#ffe6a0" stroke-width="5" opacity=".85"/>
+<path d="M470 385 755 213 1510 168" fill="none" stroke="#f3bd52" stroke-width="10" opacity=".16" filter="url(#blur)"/>
+<g stroke="#bb8b52" stroke-width="3" opacity=".8">
+ <path d="M610 285V562M790 255V562M980 243V562M1170 225V562M1360 207V562M1545 192V562"/>
+ <path d="M440 475H1570M440 535H1570"/>
+</g>
+<!-- showroom warm lighting -->
+<path d="M785 270 1475 223" stroke="#ffdb85" stroke-width="9" opacity=".6"/>
+<path d="M800 280 1475 233" stroke="#fff4ca" stroke-width="2"/>
+<g fill="#ffe1a0" opacity=".7">
+ <circle cx="820" cy="300" r="4"/><circle cx="900" cy="294" r="4"/><circle cx="980" cy="288" r="4"/><circle cx="1060" cy="282" r="4"/><circle cx="1140" cy="276" r="4"/><circle cx="1220" cy="270" r="4"/><circle cx="1300" cy="264" r="4"/><circle cx="1380" cy="258" r="4"/><circle cx="1460" cy="252" r="4"/>
+</g>
+<!-- brand sign -->
+<rect x="920" y="173" width="490" height="100" rx="10" fill="#090811" stroke="url(#gold)" stroke-width="3"/>
+<path d="M950 194h34l-18 22h20l-32 36 8-27h-19z" fill="url(#gold)"/>
+<text x="1000" y="215" font-family="Georgia,serif" font-size="37" letter-spacing="4" fill="#ffdf8c">HERITAGE</text>
+<text x="1004" y="247" font-family="Arial,sans-serif" font-size="20" letter-spacing="7" fill="#f6d99a">AUTO FINANCE</text>
+<!-- indoor cars -->
+<g opacity=".9">
+ <path d="M1255 432l35-49q14-18 41-18h73q22 0 39 25l27 42 20 9v35h-253v-34z" fill="#e4e2e0" stroke="#ffe4a0" stroke-width="2"/>
+ <path d="M1310 390l22-19h69l23 28z" fill="#3a3444"/>
+ <circle cx="1307" cy="474" r="18" fill="#07070c" stroke="#c9c0ba" stroke-width="6"/><circle cx="1442" cy="474" r="18" fill="#07070c" stroke="#c9c0ba" stroke-width="6"/>
+ <path d="M1460 430l20-30 30 5 24 34v37h-74z" fill="#272b37" stroke="#f5ca72" stroke-width="2"/>
+ <circle cx="1485" cy="476" r="15" fill="#080910" stroke="#b8b6bf" stroke-width="5"/>
+</g>
+<!-- reflective floor -->
+<path d="M0 570 1600 540V900H0Z" fill="url(#floor)"/>
+<g stroke="#b17ad7" stroke-width="2" opacity=".17">
+ <path d="M0 630 1600 590M0 695 1600 652M0 775 1600 720M0 850 1600 790"/>
+ <path d="M650 570 500 900M820 565 760 900M1050 560 1120 900M1280 552 1450 900"/>
+</g>
+<path d="M0 612 1600 582" stroke="#f7ca6a" stroke-width="4" opacity=".45"/>
+<!-- foreground car shadow -->
+<ellipse cx="830" cy="708" rx="540" ry="80" fill="#000" opacity=".8" filter="url(#shadow)"/>
+<!-- SUV body silhouette -->
+<path d="M235 624 284 569Q309 544 375 531L520 500Q564 452 638 433L865 432Q915 435 969 482L1050 533 1184 565Q1220 575 1248 613L1283 654 1272 696 1218 716 298 716 236 686Z" fill="url(#car)" stroke="#8c7e9a" stroke-width="3"/>
+<!-- SUV roof and windows -->
+<path d="M472 515 554 456Q583 441 634 440L850 441Q899 447 949 491L1005 534 476 534Z" fill="#171a27" stroke="#d4a75d" stroke-width="3"/>
+<path d="M568 462Q591 450 635 449L708 450V519L508 519Z" fill="url(#wind)" stroke="#686578" stroke-width="2"/>
+<path d="M727 450 848 452Q887 457 927 493L960 519H727Z" fill="url(#wind)" stroke="#686578" stroke-width="2"/>
+<path d="M715 450V523" stroke="#c9a05d" stroke-width="4"/>
+<!-- hood contours -->
+<path d="M970 521 1113 562 1180 585 1218 623 1080 629 947 569Z" fill="#11131c" stroke="#6f647a" stroke-width="2"/>
+<path d="M978 535 1100 570 1168 599" fill="none" stroke="#d5a052" stroke-width="4" opacity=".8"/>
+<path d="M279 603 420 560 473 548 454 591 302 629Z" fill="#1c1c28" stroke="#635b71" stroke-width="2"/>
+<!-- front grille -->
+<path d="M1058 574 1200 605 1228 655 1080 665 1018 624Z" fill="#05060a" stroke="#b5a4ba" stroke-width="4"/>
+<g stroke="#777383" stroke-width="3" opacity=".8"><path d="M1053 600 1208 629M1045 614 1215 642M1048 630 1217 656M1060 646 1194 665"/></g>
+<!-- headlights -->
+<path d="M965 546 1068 568 1092 587 1000 576Z" fill="#d9f4ff" stroke="#f7d27c" stroke-width="3"/>
+<path d="M974 552 1057 572" stroke="#fff" stroke-width="6"/>
+<path d="M290 612 406 580 426 590 321 621Z" fill="#fff1c1" stroke="#e7b24c" stroke-width="3"/>
+<!-- wheels -->
+<g>
+ <circle cx="462" cy="687" r="78" fill="#05060a" stroke="#8e7e9b" stroke-width="8"/><circle cx="462" cy="687" r="54" fill="#191923" stroke="#d0a65e" stroke-width="5"/><circle cx="462" cy="687" r="17" fill="#b7a4c5"/>
+ <circle cx="462" cy="687" r="40" fill="none" stroke="#8b8796" stroke-width="3"/><path d="M462 648v78M423 687h78M434 659l56 56M490 659l-56 56" stroke="#a8a3b3" stroke-width="5"/>
+ <circle cx="1090" cy="687" r="78" fill="#05060a" stroke="#8e7e9b" stroke-width="8"/><circle cx="1090" cy="687" r="54" fill="#191923" stroke="#d0a65e" stroke-width="5"/><circle cx="1090" cy="687" r="17" fill="#b7a4c5"/>
+ <circle cx="1090" cy="687" r="40" fill="none" stroke="#8b8796" stroke-width="3"/><path d="M1090 648v78M1051 687h78M1062 659l56 56M1118 659l-56 56" stroke="#a8a3b3" stroke-width="5"/>
+</g>
+<!-- reflections under vehicle -->
+<path d="M340 748 600 755 720 800 420 780Z" fill="#a24ddd" opacity=".12"/>
+<path d="M840 752 1120 745 1280 780 900 796Z" fill="#f0b94d" opacity=".15"/>
+<path d="M180 817H1450" stroke="#9e64d0" stroke-width="2" opacity=".2"/>
+<!-- cinematic vignette -->
+<rect width="1600" height="900" fill="none" stroke="#05050b" stroke-width="100" opacity=".58"/>
+</svg>
