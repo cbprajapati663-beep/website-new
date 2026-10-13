@@ -420,3 +420,37 @@ body{color:#f7f6fb!important}
  .hero-art:before{background:linear-gradient(180deg,#090a14 0%,rgba(9,10,20,.06) 30%,rgba(9,10,20,.08) 70%,#090a14 100%)!important}
  .hero-art .hero-car{object-position:center 55%!important}
 }
+
+/* Reference repair 6: tighten the lower service row and trust/stat strip. */
+.services{padding-top:24px!important;padding-bottom:22px!important}
+.cards{align-items:stretch!important}
+.service-card{background:#0c0e1b!important;border:1px solid rgba(246,198,79,.28)!important;box-shadow:0 8px 24px rgba(0,0,0,.2)!important;transition:transform .2s ease,border-color .2s ease!important}
+.service-card:hover{transform:translateY(-3px)!important;border-color:rgba(246,198,79,.78)!important}
+.service-card .service-photo img{transition:transform .35s ease!important}
+.service-card:hover .service-photo img{transform:scale(1.05)!important}
+.service-card .service-content h3{line-height:1.35!important;overflow-wrap:anywhere!important}
+.bottom{border-top:1px solid rgba(246,198,79,.25)!important;border-bottom:1px solid rgba(246,198,79,.18)!important;background:linear-gradient(90deg,#0b0c17,#121020 55%,#0b0c17)!important}
+.bottom-row{gap:18px!important;padding:15px 0!important}
+.wa-icon{flex:0 0 50px!important;width:50px!important;height:50px!important;border-radius:14px!important}
+.stats{min-width:0!important}
+.stat{min-width:0!important;padding:0 10px!important}
+.stat span{white-space:normal!important;line-height:1.35!important}
+.phone{min-width:175px!important}
+@media(max-width:1050px){
+ .bottom-row{flex-wrap:wrap!important;justify-content:center!important}
+ .whatsapp{min-width:220px!important}
+ .stats{flex:1 1 100%!important;order:3!important}
+ .phone{min-width:185px!important}
+}
+@media(max-width:760px){
+ .services{padding-top:18px!important;padding-bottom:18px!important}
+ .bottom-row{display:grid!important;grid-template-columns:1fr 1fr!important;gap:16px!important}
+ .whatsapp{min-width:0!important;gap:10px!important}
+ .whatsapp strong{font-size:14px!important}
+ .whatsapp span{font-size:11px!important}
+ .stats{grid-column:1/-1!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px 0!important}
+ .stat{justify-content:flex-start!important;padding:8px 10px!important}
+ .phone{min-width:0!important;width:100%!important}
+ .phone .btn{min-height:54px!important}
+ .phone b{font-size:16px!important}
+}
