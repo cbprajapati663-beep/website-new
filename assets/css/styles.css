@@ -722,3 +722,18 @@ footer{border-top:1px solid rgba(246,198,90,.13)}
  .pill{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.service-card,.service-card .service-photo img,.nav a{transition:none!important}}
+
+
+/* Custom-designed showroom scene: visual-only phase */
+.hero-art{
+ background-image:linear-gradient(90deg,rgba(7,8,17,.02),rgba(7,8,17,0)),url('../images/heritage-showroom-scene.svg');
+ background-size:cover;
+ background-position:center center;
+ background-repeat:no-repeat;
+}
+.hero-art .skyline,.hero-art .showroom,.hero-art .sign,.hero-art .hero-orbit,.hero-art .road,.hero-art .hero-car,.hero-art .pedestal{display:none!important}
+.hero-art:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,8,17,.08),transparent 22%),linear-gradient(0deg,rgba(7,8,17,.18),transparent 35%);pointer-events:none}
+@media(max-width:760px){
+ .hero-art{background-position:center center;background-size:cover}
+ .hero-art:before{background:linear-gradient(180deg,rgba(7,8,17,.02),rgba(7,8,17,.16))}
+}
