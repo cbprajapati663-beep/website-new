@@ -1027,3 +1027,44 @@ footer{border-top:1px solid rgba(246,198,90,.13)}
   .service-card { min-height:84px; }
   .service-card h3 { font-size:10px; left:9px; top:9px; }
 }
+
+
+/* Screenshot repair 22: prevent duplicate nav and replace line-art hero with photo */
+@media (max-width: 900px) {
+  .top .head > .nav,
+  .top .head > .head-cta { display: none !important; }
+  .top > #mobileNav.mobile-nav { display: none !important; }
+  .top > #mobileNav.mobile-nav.open { display: flex !important; }
+  .top .head { display:flex !important; align-items:center !important; flex-wrap:nowrap !important; }
+  .top .brand { min-width:0 !important; flex:1 1 auto !important; }
+  .top .menu { display:grid !important; flex:0 0 40px !important; }
+}
+@media (max-width: 760px) {
+  .top .trust-row { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+  .top .trust-item { min-width:0 !important; padding:6px 4px !important; }
+  .top .trust-item strong { font-size:9px !important; }
+  .top .trust-item span { font-size:8px !important; }
+  .hero { position:relative !important; overflow:hidden !important; }
+  .hero-art {
+    background-image:
+      linear-gradient(90deg,rgba(7,8,17,.97) 0%,rgba(7,8,17,.88) 35%,rgba(7,8,17,.32) 100%),
+      linear-gradient(0deg,rgba(7,8,17,.9) 0%,transparent 56%),
+      url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') !important;
+    background-size:cover !important;
+    background-position:62% center !important;
+    background-repeat:no-repeat !important;
+    opacity:1 !important;
+  }
+  .hero-art:before { background:transparent !important; }
+  .hero-art .hero-car { display:none !important; }
+  .hero-copy { position:relative !important; z-index:3 !important; padding:28px 0 34px !important; }
+  .hero-copy h1 { max-width:11ch !important; font-size:clamp(37px,9.2vw,48px) !important; }
+  .hero-copy>p { max-width:34ch !important; }
+  .cards { grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:9px !important; }
+  .service-card { height:96px !important; min-height:96px !important; }
+}
+@media (max-width: 390px) {
+  .top .brand-title { font-size:9px !important; }
+  .top .tagline { font-size:7px !important; }
+  .service-card { height:90px !important; min-height:90px !important; }
+}
