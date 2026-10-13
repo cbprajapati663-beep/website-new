@@ -546,3 +546,18 @@ body{color:#f7f6fb!important}
  .hero-art:after{width:66px!important;height:66px!important;right:39%!important;top:8%!important;font-size:6px!important}
 }
 @media(prefers-reduced-motion:reduce){.hero-art .hero-car{transform:none!important}}
+
+
+/* Premium 3D refinement — layered depth without changing the page structure */
+.hero-art{perspective:1200px;transform-style:preserve-3d}
+.hero-car{transform:translateZ(34px) rotateY(-3deg);transform-origin:55% 70%;animation:heritage-car-float 7s ease-in-out infinite;will-change:transform;}
+.showroom{transform:translateZ(-22px) rotateY(-2deg);transform-origin:right center}
+.hero-orbit{transform:translateZ(12px) skewX(-24deg) rotate(-7deg)}
+.pedestal{transform:translateZ(22px) perspective(600px) rotateX(8deg) rotateZ(-3deg)}
+.service-card{transform-style:preserve-3d;perspective:900px;box-shadow:0 7px 18px #0004;}
+.service-card .service-photo{transform:translateZ(8px);transform-style:preserve-3d;transition:transform .35s ease,filter .35s ease}
+.service-card .service-content{position:relative;z-index:2;transform:translateZ(14px)}
+@media (hover:hover) and (pointer:fine){.service-card:hover{transform:translateY(-6px) rotateX(1.5deg) rotateY(-1deg);box-shadow:0 18px 34px #0008,0 0 0 1px #f6bd4740}.service-card:hover .service-photo{filter:saturate(1.12) contrast(1.04);transform:translateZ(12px) scale(1.025)}.btn:hover{transform:translateY(-3px) perspective(500px) rotateX(2deg)}}
+@keyframes heritage-car-float{0%,100%{transform:translate3d(0,0,34px) rotateY(-3deg)}50%{transform:translate3d(0,-7px,34px) rotateY(-1.5deg)}}
+:focus-visible{outline:2px solid #ffe08a;outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.hero-car{transform:none;will-change:auto}}
