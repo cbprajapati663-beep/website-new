@@ -274,3 +274,58 @@
   .hero-art:after{top:8%;right:4%;max-width:230px;padding:10px 12px;font-size:9px}
   .hero-art .hero-car{object-position:center 55%!important}
 }
+
+
+/* 2026-10-13 final visibility + layout repair */
+:root{color-scheme:dark}
+body{color:#f7f6fb!important}
+.section h2,.process-heading h2,.panel h2,.service-heading h2{color:#fff}
+.section-intro,.process-card p,.feature span,.panel p{color:#c9c8d5}
+.process-card h3,.panel h3,.feature b{color:#fff}
+.hero{position:relative;min-height:520px!important;isolation:isolate}
+.hero-art{
+  z-index:0!important;
+  width:58%!important;height:100%!important;right:0!important;top:0!important;
+  overflow:hidden!important;border-radius:0 0 0 34px!important;
+  background:#151027 url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=90") center 58%/cover no-repeat!important;
+}
+.hero-art:before{
+  content:""!important;position:absolute!important;inset:0!important;z-index:1!important;
+  background:linear-gradient(90deg,#070811 0%,rgba(7,8,17,.92) 10%,rgba(7,8,17,.48) 40%,rgba(7,8,17,.08) 72%,rgba(7,8,17,.18) 100%),linear-gradient(0deg,rgba(7,8,17,.82),transparent 38%)!important;
+}
+.hero-art:after{
+  content:"HERITAGE AUTO FINANCE  •  YOUR TRUSTED VEHICLE FINANCE PARTNER"!important;
+  position:absolute!important;z-index:3!important;top:9%!important;right:5%!important;max-width:300px!important;
+  padding:14px 18px!important;border:1px solid #e8bb58!important;border-left:4px solid #f6c34d!important;
+  border-radius:6px!important;background:rgba(7,8,17,.88)!important;color:#ffe6a0!important;
+  font:700 11px/1.7 "Cinzel",serif!important;letter-spacing:1px!important;text-align:center!important;
+  box-shadow:0 10px 28px #0008!important;
+}
+.hero-art .skyline,.hero-art .showroom,.hero-art .hero-orbit,.hero-art .road,.hero-art .pedestal,.hero-art .hero-car{display:none!important}
+.hero-copy{z-index:4!important;width:53%!important;padding-top:36px!important;padding-bottom:28px!important}
+.hero h1{color:#fff!important}
+.services{padding:0 0 20px!important}
+.service-heading{display:none!important}
+.cards{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important}
+.service-card{height:116px!important;min-height:116px!important;display:block!important;position:relative!important;border-radius:12px!important;overflow:hidden!important;background:#0c0e1b!important}
+.service-card .service-photo{position:absolute!important;inset:0 0 0 38%!important;width:62%!important;height:100%!important;overflow:hidden!important}
+.service-card .service-photo:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#0c0e1b 0%,rgba(12,14,27,.35) 38%,transparent 100%)}
+.service-card .service-photo img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;padding:0!important;opacity:.9!important;mask-image:none!important}
+.service-card .service-icon{display:none!important}
+.service-card .service-content{position:absolute!important;z-index:2!important;inset:0 auto 0 0!important;width:72%!important;display:flex!important;justify-content:center!important;padding:10px 24px 10px 14px!important;background:linear-gradient(90deg,#0c0e1b 0%,rgba(12,14,27,.97) 66%,transparent 100%)!important}
+.service-card .service-content h3{color:#fff!important;font:700 14px/1.4 Inter,Arial,sans-serif!important;margin:0!important;max-width:150px!important}
+.service-card .service-content p,.service-card .service-content ul,.service-card .service-link{display:none!important}
+.service-card:after{content:"›"!important;position:absolute!important;z-index:4!important;right:8px!important;bottom:7px!important;inset:auto 8px 7px auto!important;width:27px!important;height:27px!important;display:grid!important;place-items:center!important;border:1px solid #f6c64f!important;border-radius:50%!important;background:#080a14!important;color:#ffe08a!important;font:400 24px/1 Inter,Arial,sans-serif!important}
+@media(max-width:1150px){.hero-copy{width:58%!important}.cards{grid-template-columns:repeat(3,minmax(0,1fr))!important}.brand{min-width:0}}
+@media(max-width:760px){
+ .hero{min-height:720px!important}.hero-copy{width:100%!important;padding:28px 0 390px!important}
+ .hero-art{top:315px!important;bottom:auto!important;width:100%!important;height:390px!important;border-radius:0!important}
+ .hero-art:before{background:linear-gradient(180deg,#070811 0%,rgba(7,8,17,.25) 30%,rgba(7,8,17,.08) 60%,#070811 100%)!important}
+ .hero-art:after{top:8%!important;right:4%!important;max-width:230px!important;padding:10px 12px!important;font-size:9px!important}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ .service-card{height:105px!important;min-height:105px!important}
+ .service-card .service-content{width:75%!important;padding-left:11px!important}
+ .service-card .service-content h3{font-size:12px!important}
+ .bottom-row{flex-wrap:wrap}
+}
+@media(max-width:390px){.cards{grid-template-columns:1fr!important}.service-card{height:112px!important;min-height:112px!important}}
