@@ -400,3 +400,43 @@ body{color:#f7f6fb!important}
 @media(max-width:1150px){.hero-copy{width:58%!important}.cards{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:760px){.hero{min-height:740px!important}.hero-copy{width:100%!important;padding:28px 0 405px!important}.hero-art{top:auto!important;bottom:0!important;left:0!important;right:0!important;width:100%!important;height:390px!important;border-radius:0!important}.hero-art:before{background:linear-gradient(180deg,#090a14 0%,rgba(9,10,20,.12) 28%,rgba(9,10,20,.08) 62%,#090a14 100%)!important}.hero-art:after{top:8%!important;right:4%!important;max-width:230px!important;padding:10px 12px!important;font-size:9px!important}.hero-art .hero-car{object-position:center 58%!important}.cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.service-card{height:105px!important;min-height:105px!important}.service-card .service-content{width:75%!important;padding-left:11px!important}.service-card .service-content h3{font-size:12px!important}.bottom-row{flex-wrap:wrap}}
 @media(max-width:390px){.cards{grid-template-columns:1fr!important}.service-card{height:112px!important;min-height:112px!important}}
+
+
+/* Reference pass 4: make the car image and showroom composition visible together. */
+.hero-art{background:#100b20!important}
+.hero-art .hero-car{
+  display:block!important;visibility:visible!important;opacity:1!important;
+  position:absolute!important;z-index:1!important;
+  left:0!important;top:0!important;right:0!important;bottom:0!important;
+  width:100%!important;height:100%!important;max-width:none!important;
+  object-fit:cover!important;object-position:center 58%!important;
+  filter:brightness(.82) contrast(1.1) saturate(1.08)!important;
+  mask-image:none!important;-webkit-mask-image:none!important;
+}
+.hero-art .showroom{
+  display:block!important;visibility:visible!important;position:absolute!important;
+  z-index:2!important;right:0!important;top:8%!important;width:34%!important;height:61%!important;
+  border:1px solid rgba(249,195,77,.85)!important;border-left:4px solid #f9c34d!important;
+  background:linear-gradient(110deg,rgba(10,10,20,.78),rgba(35,18,48,.78))!important;
+  box-shadow:0 0 34px rgba(249,195,77,.24)!important;
+}
+.hero-art .showroom:before{content:""!important;display:block!important;position:absolute!important;left:0!important;right:0!important;top:0!important;height:6px!important;background:linear-gradient(90deg,#f9c34d,#fff0b2,#a96a22)!important}
+.hero-art .showroom:after{content:""!important;display:block!important;position:absolute!important;inset:0!important;background:repeating-linear-gradient(90deg,transparent 0 28px,rgba(255,214,122,.16) 29px 31px)!important;pointer-events:none!important}
+.hero-art .sign{
+  display:flex!important;position:absolute!important;z-index:3!important;top:28%!important;left:5%!important;right:5%!important;
+  min-height:70px!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:5px!important;
+  padding:12px 8px!important;border:1px solid rgba(249,195,77,.8)!important;border-radius:5px!important;
+  background:rgba(7,8,17,.94)!important;color:#ffe6a0!important;text-align:center!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.35)!important;
+}
+.hero-art .sign i{color:#a34de5!important;font-size:20px!important}
+.hero-art .sign b{font:700 10px/1.4 Cinzel,serif!important;letter-spacing:.7px!important}
+.hero-art .sign small{font:500 8px/1.4 Inter,sans-serif!important;color:#f4e7c7!important}
+.hero-art:after{display:none!important;content:none!important}
+.hero-art .skyline,.hero-art .hero-orbit,.hero-art .road,.hero-art .pedestal{display:none!important}
+@media(max-width:760px){
+ .hero-art .showroom{top:8%!important;width:43%!important;height:44%!important}
+ .hero-art .sign{top:25%!important;min-height:54px!important;padding:8px 4px!important}
+ .hero-art .sign b{font-size:8px!important}
+ .hero-art .sign small{font-size:7px!important}
+}
