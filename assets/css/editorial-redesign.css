@@ -1,0 +1,81 @@
+/* Distinctive editorial redesign — Heritage Auto Finance */
+:root{--bg:#f5f2e9;--panel:#fffdf7;--gold:#d66b3d;--gold2:#f0a16f;--purple:#174f45;--muted:#5b655f;--line:#d8d8ca;--green:#147b54}
+html{scroll-padding-top:86px}
+body{background:#f5f2e9;color:#182a25;font-family:Inter,Arial,sans-serif}
+.wrap{width:min(1320px,calc(100% - 56px))}
+.gold{background:none;color:#d66b3d;-webkit-text-fill-color:currentColor}
+.top{background:#f8f6ef;border-bottom:1px solid #d8d8ca;backdrop-filter:none}
+.head{min-height:92px}
+.brand{min-width:310px;gap:12px}
+.crest{clip-path:none;border:0;border-radius:50%;width:62px;height:62px;background:#174f45;color:#f5c08c;text-shadow:none;box-shadow:inset 0 0 0 2px #f5f2e9,inset 0 0 0 4px #d66b3d}
+.crest i{font-size:27px;margin:0}
+.crest small{display:none}
+.brand-title{font:800 clamp(14px,1.6vw,21px) Inter,sans-serif;color:#174f45;text-shadow:none;letter-spacing:-.8px}
+.brand-rule{background:#d66b3d;margin:5px 0}
+.tagline{font-size:11px;text-align:left;color:#68736c}
+.nav{gap:2px}.nav a{font-size:12px;padding:11px 12px;color:#43544b;border-radius:5px}
+.nav a:hover,.nav a.active{color:#174f45;border:1px solid transparent;background:#e5e9df}
+.btn{border-radius:5px;padding:14px 20px;box-shadow:none!important}
+.btn-gold{background:#d66b3d;color:#fffdf7;box-shadow:none!important}
+.btn-purple{background:#174f45;color:#fff;border:1px solid #174f45}
+.head-cta{font-size:11px}
+.trust{background:#174f45;border:0;color:#fff}
+.trust-row{padding:13px 0}
+.trust-item{border-color:#ffffff2a;justify-content:flex-start;padding-left:clamp(10px,3vw,40px)}
+.trust-item i{color:#f3b88f}.trust-item span{color:#d5e0d8}
+.hero{min-height:560px;background:#f5f2e9}
+.hero-art{right:0;width:58%;height:100%;background:linear-gradient(135deg,#d8e0d4,#a7bcae 58%,#567d70);border-radius:0 0 0 120px}
+.hero-art:before{background:linear-gradient(90deg,#f5f2e9 0%,#f5f2e9a8 8%,transparent 48%),linear-gradient(0deg,#f5f2e9,transparent 27%)}
+.skyline{opacity:.18;filter:grayscale(1)}
+.showroom{border-left:0;background:linear-gradient(115deg,#204e43,#174f45 70%,#426b5b);box-shadow:none;opacity:.85}
+.showroom:before{background:#e5a077;box-shadow:none}
+.showroom:after{opacity:.3}
+.sign{background:#174f45;border:1px solid #f0b58d;box-shadow:none}
+.sign i{color:#f0b58d}.sign b{color:#fff}
+.road{background:linear-gradient(180deg,transparent,#29483e 78%)}.road:after{background:#e6a17a;box-shadow:none}
+.hero-car{width:min(83%,820px);right:5%;bottom:8%;height:61%;filter:drop-shadow(0 20px 15px #23382b55);mask-image:none}
+.hero-orbit{border-color:#f1a477;border-left-color:transparent;border-bottom-color:#174f45;filter:none;opacity:.75}
+.pedestal{right:3%;bottom:2%;width:43%;padding:14px;border:1px solid #e3a17d;border-top:3px solid #e3a17d;border-radius:8px;background:#174f45;box-shadow:0 12px 28px #24473b30;transform:none}
+.pedestal i{color:#f2b28b}.pedestal span{color:#fff}
+.hero-copy{padding:76px 0 54px;width:54%;max-width:680px}
+.eyebrow{border:0;border-radius:0;padding:0;background:transparent;color:#174f45;font-size:10px;font-weight:800;letter-spacing:2px}
+.eyebrow i{color:#d66b3d}
+.hero h1{font:800 clamp(42px,5.4vw,76px)/.99 Inter,sans-serif;letter-spacing:-3.5px;color:#174f45;margin:25px 0 20px;max-width:640px}
+.hero-copy p{color:#53635a;font-size:16px;line-height:1.8;max-width:490px}
+.actions{gap:10px;flex-wrap:wrap}
+.pills{gap:8px;margin-top:24px}.pill{border:1px solid #d3d9ce;background:#fffdf7;color:#3e5146;border-radius:4px;padding:9px 11px;font-size:11px}.pill i{color:#d66b3d}
+.services{position:relative;margin-top:-1px;padding-top:28px;padding-bottom:30px}
+.cards{gap:14px}
+.service-card{border-radius:5px;border:1px solid #d9dcd1;box-shadow:0 8px 22px #243e2c0b;background:#fffdf7;min-height:210px;overflow:hidden}
+.service-card:after{background:linear-gradient(0deg,#123d32f2,#123d3280 55%,transparent)}
+.service-card img{filter:saturate(.76);transition:transform .45s}.service-card:hover img{transform:scale(1.06)}
+.service-card h3{font-size:19px;letter-spacing:-.5px}.service-card h3 span{color:#f4b58e}
+.service-card .arrow{background:#d66b3d;border-radius:3px;box-shadow:none}
+.section{padding:76px 0;background:#f5f2e9}
+.section-kicker{color:#d66b3d;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+.section h2{font:800 clamp(30px,4vw,48px)/1.08 Inter,sans-serif;letter-spacing:-1.7px;color:#174f45;margin:12px 0 18px}
+.section-intro{color:#5c6b61;line-height:1.8;max-width:760px}
+.panel{background:#fffdf7;border:1px solid #d9dcd1;border-radius:7px;box-shadow:0 14px 38px #24473b0b;padding:28px}
+.panel h2,.panel h3{color:#174f45}
+.feature{background:#f6f5ee;border:1px solid #e4e4d9;border-radius:5px;padding:15px}
+.feature i{color:#d66b3d}.feature b{color:#1a3e32}.feature span{color:#647168}
+.feature-list{gap:12px}
+#emi.section{background:#e7ebe1!important;border-color:#d5ddd0!important}
+#emi .panel{background:#fffdf7}
+.field label,.range-line label{color:#45584c}
+input,select,textarea{background:#fff;border:1px solid #d2d9cf;color:#20372b;border-radius:4px;padding:12px}
+input[type=range]{accent-color:#d66b3d;padding:0}
+.range-line output{color:#174f45;font-weight:800}
+.result>div{border-bottom:1px solid #e0e4da;padding:14px 0}.result span{color:#657168}.result strong{color:#174f45}
+.form-note{color:#68766d;line-height:1.6}
+.contact-strip{border-radius:7px;background:#174f45;border:0;padding:32px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.contact-strip .section-kicker{color:#f2b28b}.contact-strip h2{color:#fff}.contact-strip .section-intro{color:#d6e3da}
+.bottom{background:#123b31;border-top:4px solid #d66b3d}
+.bottom-row{padding:28px 0}.whatsapp .wa-icon{background:#16845a;color:#fff;border-radius:5px}
+.stats{gap:16px}.stat{border-right:1px solid #ffffff26;padding-right:16px}.stat i{color:#f0b18b}.stat strong{color:#fff}.stat span{color:#cbd9d0}
+.phone .btn-purple{background:#d66b3d;border-color:#d66b3d}
+footer{background:#102e27;color:#c6d4ca;border-top:1px solid #ffffff1c;padding:23px 0}
+footer a{color:#f2b28b}
+@media(max-width:1100px){.nav{display:none}.head{min-height:82px}.head-cta{margin-left:auto}.menu{display:block}.hero-copy{width:57%;padding-top:64px}.hero-art{width:62%}.brand{min-width:0}}
+@media(max-width:760px){.wrap{width:calc(100% - 32px)}.head{gap:10px}.brand-title{font-size:13px;white-space:normal}.tagline{font-size:10px}.crest{width:48px;height:48px}.crest i{font-size:22px}.head-cta{display:none}.trust-row{grid-template-columns:1fr;gap:0;padding:6px 0}.trust-item{justify-content:flex-start;padding:10px 4px;border-right:0;border-bottom:1px solid #ffffff20}.trust-item:last-child{border-bottom:0}.trust-item i{font-size:18px}.hero{min-height:790px;display:flex;align-items:flex-start}.hero-art{top:340px;width:100%;height:440px;border-radius:90px 0 0 0}.hero-art:before{background:linear-gradient(180deg,#f5f2e9 0%,transparent 25%),linear-gradient(0deg,#f5f2e9,transparent 16%)}.hero-copy{width:100%;padding:44px 0 0}.hero h1{font-size:clamp(43px,12vw,64px);letter-spacing:-2.5px;margin:20px 0 14px;max-width:560px}.hero-copy p{font-size:14px;max-width:95%}.hero-car{width:100%;height:55%;right:0;bottom:14%}.showroom{width:44%;height:55%;top:5%}.pedestal{width:92%;right:4%;bottom:2%;padding:10px}.pedestal i{font-size:19px}.pedestal span{font-size:9px}.hero-orbit{left:5%;width:90%;bottom:20%}.pills{max-width:500px}.services{padding-top:18px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-card{min-height:190px}.service-card h3{font-size:17px}.service-card:last-child{grid-column:1/-1;min-height:155px}.section{padding:54px 0}.about-grid,.tools-grid{grid-template-columns:1fr;gap:16px}.panel{padding:21px}.contact-strip{align-items:flex-start;flex-direction:column;padding:24px}.bottom-row{align-items:flex-start;flex-direction:column;gap:24px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.stat{border:0;padding:8px 0}.phone{width:100%}.phone .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
