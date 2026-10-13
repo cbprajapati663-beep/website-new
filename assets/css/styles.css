@@ -149,3 +149,18 @@
 @media(max-width:1200px) { .cards { grid-template-columns:repeat(3,minmax(0,1fr)); } .service-card { min-height:285px; } .service-card h3 { position:static; left:auto; font-size:19px; } }
 @media(max-width:900px) { .services { padding:30px 0 38px; } .cards { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .service-card { min-height:270px; } .service-card:last-child { grid-column:auto; } .service-content { padding:15px 13px; } }
 @media(max-width:520px) { .service-heading { margin-bottom:20px; } .service-heading h2 { font-size:29px; } .service-heading p { font-size:12px; } .cards { gap:10px; } .service-card { min-height:245px; border-radius:15px; } .service-icon { width:39px; height:39px; margin:11px 0 0 11px; font-size:16px; border-radius:12px; } .service-content { min-height:133px; padding:12px 11px; gap:8px; } .service-index { font-size:8px; letter-spacing:.07em; } .service-card h3 { font-size:17px; } .service-link { font-size:9px; gap:6px; } .service-link i { width:23px; height:23px; } }
+
+
+/* Supporting sections added to complete the full landing-page journey */
+.process-section { position:relative; overflow:hidden; border-block:1px solid #ffffff0d; background:radial-gradient(ellipse at 50% 0%,#25103d88,transparent 55%),linear-gradient(180deg,#090a14,#0b0c17); }
+.process-heading { max-width:760px; margin-bottom:30px; }
+.process-heading .section-kicker { display:inline-flex; gap:8px; align-items:center; }
+.process-heading h2 { margin:13px 0 10px; }
+.process-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.process-card { position:relative; min-height:220px; padding:25px 22px; border:1px solid #f9c34d35; border-radius:18px; background:linear-gradient(145deg,#141126,#090a14 80%); box-shadow:inset 0 1px #ffffff0b,0 15px 35px #0003; }
+.process-no { position:absolute; top:16px; right:18px; font:700 27px "Cinzel",serif; color:#f9c34d65; }
+.process-icon { display:grid; place-items:center; width:52px; height:52px; border-radius:15px; border:1px solid #a44ce1; color:#ffe29a; background:linear-gradient(145deg,#311347,#0a0b16); box-shadow:0 0 20px #8b36d833; font-size:21px; }
+.process-card h3 { margin:22px 0 9px; font:700 19px "Playfair Display",serif; }
+.process-card p { margin:0; color:#bfc0cf; font-size:13px; line-height:1.7; }
+@media(max-width:900px) { .process-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .process-card { min-height:205px; } }
+@media(max-width:520px) { .process-grid { gap:10px; } .process-card { padding:17px 14px; min-height:195px; } .process-icon { width:43px; height:43px; font-size:18px; } .process-card h3 { font-size:16px; margin-top:17px; } .process-card p { font-size:12px; } .process-no { top:12px; right:12px; font-size:22px; } }
