@@ -123,3 +123,29 @@
 @media(max-width:1200px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.service-card{height:265px;min-height:265px}.service-card h3{font-size:20px}}
 @media(max-width:760px){.service-heading{margin-bottom:18px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-card{height:238px;min-height:238px}.service-content{left:12px;right:10px;bottom:13px}.service-icon{top:11px;left:11px;width:39px;height:39px;font-size:16px}.service-index{font-size:8px;letter-spacing:.8px}.service-card h3{font-size:17px;margin-bottom:12px}.service-link{font-size:8px;letter-spacing:.8px}}
 @media(max-width:390px){.cards{gap:8px}.service-card{height:220px;min-height:220px;border-radius:13px}.service-content{left:10px;right:8px;bottom:11px}.service-card h3{font-size:15px}.service-icon{width:34px;height:34px;font-size:14px}.service-index{font-size:7px}}
+
+
+/* Reference-driven service cards: full artwork, icon badge, hierarchy and CTA */
+.services { padding: 34px 0 48px; }
+.service-heading { text-align:center; margin: 0 auto 28px; max-width:760px; }
+.service-heading .section-kicker { display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border:1px solid #a44ce1; border-radius:30px; background:#160d28; box-shadow:0 0 22px #8b36d833; }
+.service-heading h2 { font:700 clamp(29px,3.4vw,45px)/1.12 "Playfair Display",serif; margin:15px 0 10px; }
+.service-heading p { color:#c7c7d4; margin:0; font-size:14px; line-height:1.7; }
+.cards { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px; align-items:stretch; }
+.service-card { display:flex; flex-direction:column; min-height:310px; isolation:isolate; border:1px solid rgba(249,195,77,.42); border-radius:18px; background:#0b0d19; box-shadow:0 12px 28px #0005,inset 0 0 0 1px #ffffff08; }
+.service-card:before { content:""; position:absolute; z-index:-1; inset:0; background:radial-gradient(ellipse at 70% 18%,#8b36d84a,transparent 55%),linear-gradient(180deg,transparent 22%,#090a15 65%,#090a15 100%); }
+.service-card:after { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(180deg,#07081100 0%,#07081112 30%,#070811c9 60%,#070811 100%); pointer-events:none; }
+.service-card img { position:absolute; z-index:-2; inset:0 0 auto; width:100%; height:67%; object-fit:cover; opacity:.92; mask-image:linear-gradient(180deg,#000 55%,transparent 100%); transition:transform .5s ease,opacity .3s ease; }
+.service-card:hover img { transform:scale(1.06); opacity:1; }
+.service-icon { position:relative; z-index:2; display:grid; place-items:center; width:48px; height:48px; margin:16px 0 0 16px; border-radius:14px; color:#ffe29a; font-size:20px; border:1px solid #f9c34d; background:linear-gradient(145deg,#211034eF,#090a15f2); box-shadow:0 0 20px #9b3dd655; }
+.service-content { position:relative; z-index:2; display:flex; flex-direction:column; align-items:flex-start; gap:10px; margin-top:auto; padding:18px 16px 16px; min-height:145px; }
+.service-index { font-size:9px; font-weight:800; letter-spacing:.12em; color:#e5c578; }
+.service-card h3 { position:static; transform:none; margin:0; font:700 clamp(17px,1.35vw,21px)/1.22 "Playfair Display",serif; color:#fff; }
+.service-card h3 span { display:block; color:#f9c34d; }
+.service-link { display:inline-flex; align-items:center; gap:9px; margin-top:3px; font-size:10px; font-weight:800; letter-spacing:.1em; color:#ffe6a0; }
+.service-link i { display:grid; place-items:center; width:26px; height:26px; border:1px solid #e8bb4b; border-radius:50%; font-size:10px; transition:transform .2s ease,background .2s ease; }
+.service-card:hover .service-link i { transform:translateX(3px); background:#6b2a9a; }
+.service-card:focus-visible { outline:2px solid #ffe6a0; outline-offset:4px; }
+@media(max-width:1200px) { .cards { grid-template-columns:repeat(3,minmax(0,1fr)); } .service-card { min-height:285px; } .service-card h3 { position:static; left:auto; font-size:19px; } }
+@media(max-width:900px) { .services { padding:30px 0 38px; } .cards { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .service-card { min-height:270px; } .service-card:last-child { grid-column:auto; } .service-content { padding:15px 13px; } }
+@media(max-width:520px) { .service-heading { margin-bottom:20px; } .service-heading h2 { font-size:29px; } .service-heading p { font-size:12px; } .cards { gap:10px; } .service-card { min-height:245px; border-radius:15px; } .service-icon { width:39px; height:39px; margin:11px 0 0 11px; font-size:16px; border-radius:12px; } .service-content { min-height:133px; padding:12px 11px; gap:8px; } .service-index { font-size:8px; letter-spacing:.07em; } .service-card h3 { font-size:17px; } .service-link { font-size:9px; gap:6px; } .service-link i { width:23px; height:23px; } }
