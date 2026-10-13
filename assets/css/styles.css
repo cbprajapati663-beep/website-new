@@ -609,3 +609,36 @@ body{color:#f7f6fb!important}
 @media (min-width:761px) {
   .hero-art .hero-car { animation:heritage-car-float 8s ease-in-out infinite; }
 }
+
+
+/* Final responsive polish: prevent title clipping and keep hero/car layers stable */
+.hero-copy, .service-heading, .service-content { min-width: 0; }
+.hero h1 { overflow-wrap: normal; text-wrap: balance; }
+.hero p { text-wrap: pretty; }
+.hero-art { pointer-events: none; }
+.hero-car { max-width: 100%; }
+.service-card .service-content h3 { overflow-wrap: anywhere; }
+.service-card:focus-visible, .services-all:focus-visible, .btn:focus-visible {
+  outline: 2px solid #ffe08a;
+  outline-offset: 4px;
+}
+@media (min-width: 1201px) {
+  .hero-copy { width: 51%; }
+  .hero-art { width: 68%; }
+  .hero-car { right: 7%; width: min(81%, 830px); }
+}
+@media (min-width: 761px) and (max-width: 1200px) {
+  .hero-copy { width: 57%; }
+  .hero-art { width: 69%; }
+  .hero-car { right: 4%; width: 84%; }
+}
+@media (max-width: 760px) {
+  .hero-copy { padding-bottom: 260px; }
+  .hero-art { overflow: hidden; }
+  .hero-car { object-position: 50% 70%; }
+  .service-card { min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-art .hero-car { animation: none !important; }
+  .service-card, .service-card .service-photo, .btn { transition: none !important; }
+}
