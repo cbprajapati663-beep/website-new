@@ -329,3 +329,48 @@ body{color:#f7f6fb!important}
  .bottom-row{flex-wrap:wrap}
 }
 @media(max-width:390px){.cards{grid-template-columns:1fr!important}.service-card{height:112px!important;min-height:112px!important}}
+
+
+/* 2026-10-13 actual hero repair: keep the real vehicle img visible.
+   The previous override hid .hero-car and used a generic background photo,
+   which caused the hero to lose the vehicle/showroom composition. */
+.hero{position:relative!important;overflow:hidden!important;background:#090a14!important}
+.hero-art{
+  position:absolute!important;z-index:0!important;right:0!important;top:0!important;
+  width:60%!important;height:100%!important;overflow:hidden!important;
+  border-radius:0 0 0 30px!important;
+  background:#100b20!important;
+}
+.hero-art .hero-car{
+  display:block!important;position:absolute!important;z-index:0!important;
+  inset:0!important;width:100%!important;height:100%!important;max-width:none!important;
+  object-fit:cover!important;object-position:center 56%!important;
+  padding:0!important;opacity:1!important;filter:brightness(.78) contrast(1.12) saturate(1.06)!important;
+  mask-image:none!important;-webkit-mask-image:none!important;
+}
+.hero-art:before{
+  content:""!important;position:absolute!important;z-index:1!important;inset:0!important;
+  background:linear-gradient(90deg,#090a14 0%,rgba(9,10,20,.9) 10%,rgba(9,10,20,.42) 38%,rgba(9,10,20,.04) 75%),
+  linear-gradient(0deg,rgba(9,10,20,.74),transparent 38%)!important;
+}
+.hero-art:after{
+  content:"HERITAGE AUTO FINANCE  ·  YOUR TRUSTED VEHICLE FINANCE PARTNER"!important;
+  position:absolute!important;z-index:3!important;top:9%!important;right:5%!important;
+  max-width:300px!important;padding:14px 18px!important;
+  border:1px solid rgba(249,195,77,.9)!important;border-left:4px solid #f9c34d!important;
+  border-radius:5px!important;background:rgba(7,8,17,.9)!important;color:#ffe6a0!important;
+  font:700 11px/1.7 Cinzel,serif!important;letter-spacing:1px!important;text-align:center!important;
+  box-shadow:0 10px 28px #0008!important;
+}
+.hero-art .skyline,.hero-art .showroom,.hero-art .hero-orbit,.hero-art .road,.hero-art .pedestal{display:none!important}
+.hero-copy{position:relative!important;z-index:4!important;width:51%!important}
+.hero h1,.hero-copy p,.hero-copy .eyebrow,.hero-copy .actions,.hero-copy .pills{position:relative;z-index:4}
+.service-card .service-photo img{object-fit:cover!important;object-position:center!important}
+@media(max-width:760px){
+ .hero{min-height:740px!important}
+ .hero-copy{width:100%!important;padding:28px 0 405px!important}
+ .hero-art{top:auto!important;bottom:0!important;left:0!important;right:0!important;width:100%!important;height:390px!important;border-radius:0!important}
+ .hero-art:before{background:linear-gradient(180deg,#090a14 0%,rgba(9,10,20,.12) 28%,rgba(9,10,20,.08) 62%,#090a14 100%)!important}
+ .hero-art:after{top:8%!important;right:4%!important;max-width:230px!important;padding:10px 12px!important;font-size:9px!important}
+ .hero-art .hero-car{object-position:center 58%!important}
+}
