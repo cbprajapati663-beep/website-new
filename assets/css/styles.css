@@ -170,3 +170,22 @@
 @media(max-width:1150px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.service-photo{height:175px}.service-content h3{font-size:18px}}
 @media(max-width:700px){.services{padding-top:38px;padding-bottom:46px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-photo{height:120px}.service-icon{left:12px;width:40px;height:40px;bottom:-19px;font-size:16px}.service-content{padding:27px 12px 13px}.service-content h3{font-size:15px}.service-content p{font-size:11px}.service-content li{font-size:10px}.service-content ul{gap:7px}.service-link{padding:10px;font-size:10px}.service-heading h2{font-size:29px}}
 @media(max-width:390px){.cards{grid-template-columns:1fr}.service-photo{height:185px}.service-content{padding-inline:18px}.service-content h3{font-size:18px}.service-content li{font-size:12px}}
+
+
+/* Reference-match repair: restore full photographic service cards instead of the old compact overlay-card rules. */
+.service-card{display:flex;flex-direction:column;min-height:0;height:100%;overflow:hidden;border:1px solid rgba(196,137,255,.42);border-radius:16px;background:linear-gradient(155deg,#17132b 0%,#0a0b16 75%);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.service-card:after{content:none!important}
+.service-card .service-photo{position:relative;display:block;width:100%;height:150px;flex:none;overflow:visible;background:#171127}
+.service-card .service-photo img{position:relative;inset:auto;display:block;width:100%;height:100%;object-fit:cover;opacity:1;mask-image:linear-gradient(180deg,#000 70%,transparent 100%);filter:saturate(1.08) contrast(1.04)}
+.service-card .service-icon{position:absolute;z-index:3;left:16px;bottom:-22px;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;border:2px solid #f8c34d;background:linear-gradient(135deg,#31164b,#090a14);color:#ffe08a;box-shadow:0 0 18px #9c43df55;font-size:18px}
+.service-card .service-content{position:relative;z-index:2;display:flex;flex:1;flex-direction:column;padding:31px 17px 18px}
+.service-card .service-content h3{position:static;transform:none;margin:0 0 7px;font:700 17px/1.35 Inter,Arial,sans-serif;color:#fff}
+.service-card .service-content p{font-size:12px;line-height:1.5;color:#e8c96f;margin:0 0 13px;min-height:18px}
+.service-card .service-content ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:9px}
+.service-card .service-content li{position:relative;padding-left:19px;font-size:11px;line-height:1.4;color:#d7d5e2}
+.service-card .service-content li:before{content:"✓";position:absolute;left:0;top:0;color:#f8c34d;font-weight:900}
+.service-card .service-link{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding:11px 13px;border-radius:7px;background:linear-gradient(110deg,#ffe39a,#e9ad31);color:#17101e;font-size:11px;font-weight:900;letter-spacing:.3px}
+.service-card .service-link i{font-size:14px}
+@media(max-width:1150px){.service-card .service-photo{height:175px}}
+@media(max-width:700px){.service-card .service-photo{height:120px}.service-card .service-icon{left:12px;width:40px;height:40px;bottom:-19px;font-size:16px}.service-card .service-content{padding:27px 12px 13px}.service-card .service-content h3{font-size:15px}.service-card .service-content p{font-size:11px}.service-card .service-content li{font-size:10px}.service-card .service-content ul{gap:7px}.service-card .service-link{padding:10px;font-size:10px}}
+@media(max-width:390px){.service-card .service-photo{height:185px}.service-card .service-content{padding-inline:18px}.service-card .service-content h3{font-size:18px}.service-card .service-content li{font-size:12px}}
