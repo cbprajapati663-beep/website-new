@@ -1250,3 +1250,56 @@ header.top > nav#mobileNav.open { display:flex !important; }
   .trust-item strong { font-size:9px !important; }
   .trust-item span { font-size:8px !important; }
 }
+
+
+/* PASS 28 — reference-first composition: clean header, cinematic hero, five equal service tiles */
+header.top { position:relative !important; }
+header.top > nav#mobileNav.mobile-nav { display:none !important; }
+header.top > nav#mobileNav.mobile-nav.open { display:flex !important; }
+@media (min-width:901px) {
+  header.top > nav#mobileNav,
+  header.top > nav#mobileNav.open { display:none !important; }
+  header.top .head { display:flex !important; flex-wrap:nowrap !important; }
+  header.top .head > .nav { display:flex !important; }
+  header.top .head > .menu { display:none !important; }
+}
+@media (max-width:900px) {
+  header.top .head > .nav,
+  header.top .head > .head-cta { display:none !important; }
+  header.top .head > .menu { display:grid !important; }
+  header.top > nav#mobileNav.mobile-nav { display:none !important; }
+  header.top > nav#mobileNav.mobile-nav.open { display:flex !important; }
+}
+main#home section.hero { min-height:530px !important; position:relative !important; overflow:hidden !important; }
+main#home section.hero > .hero-art {
+  width:74% !important;
+  background:
+    linear-gradient(90deg,#070811 0%,rgba(7,8,17,.96) 16%,rgba(7,8,17,.74) 35%,rgba(7,8,17,.18) 72%,rgba(7,8,17,.08) 100%),
+    linear-gradient(0deg,rgba(7,8,17,.96) 0%,rgba(7,8,17,.08) 46%,rgba(7,8,17,.16) 100%),
+    url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 64% center / cover no-repeat !important;
+}
+main#home section.hero > .hero-art:before { display:none !important; }
+main#home section.hero .hero-art .showroom,
+main#home section.hero .hero-art .sign,
+main#home section.hero .hero-art .skyline,
+main#home section.hero .hero-art .hero-orbit,
+main#home section.hero .hero-art .road,
+main#home section.hero .hero-art .pedestal,
+main#home section.hero .hero-art .hero-car { display:none !important; }
+main#home section.hero .hero-copy { width:52% !important; max-width:660px !important; }
+main#home section.hero h1 { max-width:580px !important; }
+section.services .cards { grid-template-columns:repeat(5,minmax(0,1fr)) !important; }
+section.services .service-card { min-width:0 !important; }
+section.services .service-card h3 { max-width:75% !important; overflow-wrap:anywhere; }
+@media (max-width:760px) {
+  main#home section.hero { min-height:0 !important; }
+  main#home section.hero > .hero-art {
+    width:100% !important;
+    background:
+      linear-gradient(90deg,rgba(7,8,17,.96) 0%,rgba(7,8,17,.83) 38%,rgba(7,8,17,.3) 100%),
+      linear-gradient(0deg,rgba(7,8,17,.96) 0%,rgba(7,8,17,.04) 58%),
+      url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 62% center / cover no-repeat !important;
+  }
+  main#home section.hero .hero-copy { width:100% !important; padding:28px 0 34px !important; }
+  section.services .cards { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+}
