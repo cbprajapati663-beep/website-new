@@ -1211,3 +1211,42 @@ header.top > nav#mobileNav.mobile-nav.open { display:flex !important; }
   header.top .nav a { padding:8px 5px !important; font-size:10px !important; }
   header.top .head-cta { padding:11px 12px !important; font-size:9px !important; }
 }
+
+
+/* Pass 27 — navigation failsafe and desktop content readability */
+header.top > nav#mobileNav { display:none !important; }
+header.top > nav#mobileNav.open { display:flex !important; }
+@media (min-width:901px) {
+  header.top > nav#mobileNav,
+  header.top > nav#mobileNav.open { display:none !important; }
+  header.top .head > nav.nav { display:flex !important; visibility:visible !important; }
+}
+@media (max-width:900px) {
+  header.top .head > nav.nav { display:none !important; }
+  header.top > nav#mobileNav { display:none !important; }
+  header.top > nav#mobileNav.open { display:flex !important; }
+}
+@media (min-width:901px) {
+  .trust-row { padding:10px 0 !important; }
+  .trust-item { gap:11px !important; }
+  .trust-item i { font-size:20px !important; }
+  .trust-item strong { font-size:11px !important; }
+  .trust-item span { font-size:10px !important; }
+  .about-grid { gap:28px !important; }
+  .panel { padding:24px !important; }
+  .tools-grid { gap:18px !important; }
+  .bottom-row { padding:14px 0 !important; }
+  .whatsapp { min-width:190px !important; }
+  .wa-icon { width:48px !important; height:48px !important; font-size:29px !important; }
+  .stat i { font-size:20px !important; }
+  .stat strong { font-size:13px !important; }
+  .stat span { font-size:10px !important; }
+  .phone { min-width:170px !important; }
+}
+@media (max-width:760px) {
+  .trust-row { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+  .trust-item { justify-content:center !important; }
+  .trust-item i { font-size:16px !important; }
+  .trust-item strong { font-size:9px !important; }
+  .trust-item span { font-size:8px !important; }
+}
