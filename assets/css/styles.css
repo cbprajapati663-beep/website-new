@@ -1347,3 +1347,35 @@ html, body { max-width:100%; overflow-x:hidden; }
   section.services .service-card { min-height:88px !important; }
   section.services .service-card h3 { font-size:10px !important; }
 }
+
+
+/* Pass 30 — final responsive guardrails and polished card/bottom-strip rhythm */
+@media (min-width:901px) {
+  section.services .service-card { min-height:122px !important; }
+  section.services .service-card .arrow { width:28px !important; height:28px !important; }
+  .bottom-row { gap:16px !important; }
+  .stats { min-width:0 !important; }
+  .stat { min-width:0 !important; gap:8px !important; }
+  .stat span { white-space:normal !important; }
+}
+@media (max-width:900px) {
+  .bottom-row { display:flex !important; flex-direction:column !important; align-items:stretch !important; gap:16px !important; }
+  .whatsapp { min-width:0 !important; }
+  .stats { width:100% !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:12px 6px !important; }
+  .stat { justify-content:flex-start !important; border-right:0 !important; padding:5px 4px !important; }
+  .phone { width:100% !important; min-width:0 !important; }
+  .phone .btn { justify-content:center !important; }
+  .tools-grid { grid-template-columns:1fr !important; }
+  .about-grid { grid-template-columns:1fr !important; }
+  .contact-strip { align-items:flex-start !important; flex-direction:column !important; }
+  .contact-strip > .btn { width:100% !important; }
+}
+@media (max-width:520px) {
+  .panel { padding:19px !important; border-radius:17px !important; }
+  .result { grid-template-columns:1fr !important; }
+  .result div { display:flex !important; align-items:center !important; justify-content:space-between !important; gap:12px !important; }
+  .result strong { margin-top:0 !important; font-size:15px !important; text-align:right !important; }
+  .feature-list { grid-template-columns:1fr !important; }
+  .contact-strip { padding:20px !important; }
+  section.services .service-card { min-height:88px !important; }
+}
