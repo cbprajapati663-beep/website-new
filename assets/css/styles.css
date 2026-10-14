@@ -1379,3 +1379,34 @@ html, body { max-width:100%; overflow-x:hidden; }
   .contact-strip { padding:20px !important; }
   section.services .service-card { min-height:88px !important; }
 }
+
+
+/* Pass 31 — header breakpoint and image safeguards */
+@media (min-width:901px) and (max-width:1120px) {
+  header.top .head { gap:12px !important; }
+  header.top .nav, header.top .head-cta { display:none !important; }
+  header.top .menu { display:grid !important; place-items:center !important; flex:0 0 42px !important; }
+  header.top .mobile-nav { display:none !important; }
+  header.top .mobile-nav.open { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:8px !important; }
+  header.top .mobile-nav a { min-width:0 !important; text-align:center !important; }
+}
+@media (min-width:1121px) {
+  header.top .nav { display:flex !important; flex-wrap:nowrap !important; min-width:0 !important; }
+  header.top .head { min-width:0 !important; }
+  header.top .mobile-nav { display:none !important; }
+  header.top .menu { display:none !important; }
+}
+header.top .nav a:focus-visible,
+header.top .mobile-nav a:focus-visible,
+header.top .menu:focus-visible,
+.btn:focus-visible,
+.service-card:focus-visible {
+  outline:2px solid #ffe6a0 !important;
+  outline-offset:3px !important;
+}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto !important; }
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+.service-photo img,
+.hero-art .hero-car { background-color:#11101d; }
