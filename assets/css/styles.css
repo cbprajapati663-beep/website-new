@@ -1516,3 +1516,83 @@ section.services .service-card:hover {
   section.services .service-card .service-content h3 { font-size:11px !important; }
   section.services .service-card .service-content:after { right:8px !important; bottom:8px !important; width:24px !important; height:24px !important; font-size:15px !important; }
 }
+
+
+/* Pass 33 — lock the hero composition to the reference: cinematic right-side vehicle image, clear left text column */
+main#home section.hero {
+  position:relative !important;
+  min-height:540px !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+  background:#070811 !important;
+}
+main#home section.hero > .hero-art {
+  position:absolute !important;
+  inset:0 0 0 auto !important;
+  width:76% !important;
+  height:100% !important;
+  z-index:0 !important;
+  background:
+    linear-gradient(90deg,#070811 0%,rgba(7,8,17,.96) 12%,rgba(7,8,17,.76) 32%,rgba(7,8,17,.18) 68%,rgba(7,8,17,.10) 100%),
+    linear-gradient(0deg,rgba(7,8,17,.96) 0%,rgba(7,8,17,.08) 40%,rgba(7,8,17,.16) 100%),
+    url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 64% center / cover no-repeat !important;
+}
+main#home section.hero > .hero-art:before { display:none !important; }
+main#home section.hero .hero-art .showroom,
+main#home section.hero .hero-art .sign,
+main#home section.hero .hero-art .skyline,
+main#home section.hero .hero-art .hero-orbit,
+main#home section.hero .hero-art .road,
+main#home section.hero .hero-art .pedestal,
+main#home section.hero .hero-art .hero-car { display:none !important; }
+main#home section.hero > .wrap {
+  position:relative !important;
+  z-index:2 !important;
+}
+main#home section.hero .hero-copy {
+  width:51% !important;
+  max-width:650px !important;
+  padding:50px 0 34px !important;
+}
+main#home section.hero .eyebrow { max-width:100% !important; }
+main#home section.hero h1 {
+  max-width:570px !important;
+  font-size:clamp(42px,4.3vw,68px) !important;
+  line-height:1.03 !important;
+  letter-spacing:-.035em !important;
+}
+main#home section.hero p {
+  max-width:440px !important;
+  line-height:1.65 !important;
+}
+main#home section.hero .actions { flex-wrap:wrap !important; }
+main#home section.hero .pills { max-width:560px !important; }
+@media (min-width:901px) {
+  main#home section.hero .hero-copy { padding-top:54px !important; }
+}
+@media (max-width:900px) {
+  main#home section.hero { min-height:0 !important; }
+  main#home section.hero > .hero-art {
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    background:
+      linear-gradient(90deg,rgba(7,8,17,.97) 0%,rgba(7,8,17,.88) 42%,rgba(7,8,17,.42) 100%),
+      linear-gradient(0deg,rgba(7,8,17,.98) 0%,rgba(7,8,17,.14) 62%),
+      url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 62% center / cover no-repeat !important;
+  }
+  main#home section.hero .hero-copy {
+    width:100% !important;
+    max-width:680px !important;
+    padding:38px 0 36px !important;
+  }
+  main#home section.hero h1 { max-width:590px !important; }
+}
+@media (max-width:520px) {
+  main#home section.hero .hero-copy { padding:28px 0 30px !important; }
+  main#home section.hero h1 { font-size:clamp(35px,9.5vw,46px) !important; }
+  main#home section.hero p { font-size:14px !important; max-width:100% !important; }
+  main#home section.hero .actions { display:grid !important; grid-template-columns:1fr !important; }
+  main#home section.hero .actions .btn { justify-content:center !important; }
+  main#home section.hero .pills { gap:6px !important; }
+}
