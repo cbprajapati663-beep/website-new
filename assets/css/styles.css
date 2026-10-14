@@ -2082,3 +2082,49 @@ main#home section.hero .pill {
   main#home section.hero *,
   header.top * { scroll-behavior:auto !important; animation-duration:.01ms !important; transition-duration:.01ms !important; }
 }
+
+
+/* Pass 38 — prevent tablet header collisions and keep the premium layout intentional */
+@media (min-width: 901px) and (max-width: 1120px) {
+  header.top .head { min-height: 78px !important; }
+  header.top .head > .nav,
+  header.top .head > .head-cta { display: none !important; }
+  header.top .head > .menu {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    flex: 0 0 44px !important;
+  }
+  header.top > nav#mobileNav.mobile-nav.open {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    padding: 10px 0 16px !important;
+  }
+  header.top > nav#mobileNav.mobile-nav.open a {
+    min-width: 0 !important;
+    text-align: center !important;
+    border-color: rgba(245,198,93,.18) !important;
+    background: rgba(255,255,255,.025) !important;
+  }
+}
+@media (min-width: 901px) and (max-width: 1120px) {
+  main#home section.hero { min-height: 520px !important; }
+  main#home section.hero .hero-copy { width: 58% !important; padding-top: 46px !important; }
+  main#home section.hero h1 { font-size: clamp(43px, 5vw, 58px) !important; }
+  main#home section.hero .actions { flex-wrap: wrap !important; }
+  main#home section.hero .actions .btn { padding-inline: 16px !important; font-size: 13px !important; }
+  section.services .cards { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card img,
+  .btn,
+  .process-card,
+  #work .feature,
+  #contact .feature {
+    transition: none !important;
+    animation: none !important;
+  }
+}
