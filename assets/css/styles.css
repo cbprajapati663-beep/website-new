@@ -1596,3 +1596,97 @@ main#home section.hero .pills { max-width:560px !important; }
   main#home section.hero .actions .btn { justify-content:center !important; }
   main#home section.hero .pills { gap:6px !important; }
 }
+
+
+/* Pass 34 — unify the trust strip and hero-to-services transition */
+.trust {
+  position:relative !important;
+  z-index:3 !important;
+  background:linear-gradient(90deg,#0d0c1b 0%,#151027 52%,#0d0c1b 100%) !important;
+  border-top:1px solid rgba(216,174,82,.22) !important;
+  border-bottom:1px solid rgba(216,174,82,.22) !important;
+}
+.trust .trust-row {
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  align-items:center !important;
+  gap:0 !important;
+}
+.trust .trust-item {
+  min-width:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:12px !important;
+  padding:15px 18px !important;
+}
+.trust .trust-item + .trust-item {
+  border-left:1px solid rgba(255,255,255,.10) !important;
+}
+.trust .trust-item > i {
+  flex:0 0 auto !important;
+  color:#eac66f !important;
+  font-size:21px !important;
+}
+.trust .trust-item strong {
+  display:block !important;
+  color:#fff !important;
+  font-size:13px !important;
+  line-height:1.4 !important;
+}
+.trust .trust-item span {
+  display:block !important;
+  color:#bcb7ce !important;
+  font-size:11px !important;
+  line-height:1.5 !important;
+}
+section.services {
+  padding-top:38px !important;
+}
+section.services .service-heading {
+  position:relative !important;
+  padding-right:180px !important;
+  margin-bottom:20px !important;
+}
+section.services .service-heading h2 {
+  margin:8px 0 6px !important;
+  color:#fff !important;
+  line-height:1.16 !important;
+}
+section.services .service-heading p {
+  margin:0 !important;
+  color:#bcb7ce !important;
+}
+section.services .service-heading .services-all {
+  position:absolute !important;
+  right:0 !important;
+  bottom:5px !important;
+  white-space:nowrap !important;
+}
+@media (max-width:900px) {
+  .trust .trust-item { padding:13px 10px !important; gap:8px !important; }
+  .trust .trust-item > i { font-size:18px !important; }
+  .trust .trust-item strong { font-size:12px !important; }
+  .trust .trust-item span { font-size:10px !important; }
+  section.services { padding-top:30px !important; }
+}
+@media (max-width:600px) {
+  .trust .trust-row { grid-template-columns:1fr !important; }
+  .trust .trust-item {
+    justify-content:flex-start !important;
+    padding:11px 4px !important;
+  }
+  .trust .trust-item + .trust-item {
+    border-left:0 !important;
+    border-top:1px solid rgba(255,255,255,.10) !important;
+  }
+  section.services .service-heading {
+    padding-right:0 !important;
+    margin-bottom:17px !important;
+  }
+  section.services .service-heading .services-all {
+    position:static !important;
+    display:inline-flex !important;
+    margin-top:12px !important;
+  }
+}
