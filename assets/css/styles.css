@@ -1937,3 +1937,148 @@ section.services .service-card .service-content:after {
   section.services .cards { grid-template-columns:1fr !important; }
   section.services .service-card { height:136px !important; min-height:136px !important; }
 }
+
+
+/* Pass 37 — strengthen the luxury showroom hero composition and header rhythm */
+header.top .head {
+  min-height:86px !important;
+  gap:clamp(12px,1.5vw,24px) !important;
+}
+header.top .brand { flex:0 0 auto !important; min-width:235px !important; }
+header.top .brand-title { letter-spacing:.055em !important; }
+header.top .nav {
+  gap:clamp(10px,1.15vw,19px) !important;
+}
+header.top .nav a {
+  font-size:12px !important;
+  white-space:nowrap !important;
+}
+header.top .head-cta {
+  flex:0 0 auto !important;
+  padding:13px 16px !important;
+  font-size:11px !important;
+  letter-spacing:.035em !important;
+}
+main#home section.hero {
+  min-height:555px !important;
+  isolation:isolate !important;
+  background:#080812 !important;
+}
+main#home section.hero > .hero-art {
+  position:absolute !important;
+  inset:0 0 0 auto !important;
+  width:67% !important;
+  height:100% !important;
+  z-index:-1 !important;
+  background:
+    linear-gradient(90deg,#080812 0%,rgba(8,8,18,.88) 7%,rgba(8,8,18,.38) 34%,rgba(8,8,18,.06) 70%),
+    linear-gradient(0deg,rgba(8,8,18,.84) 0%,rgba(8,8,18,0) 45%,rgba(8,8,18,.14) 100%),
+    url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 62% center / cover no-repeat !important;
+  opacity:1 !important;
+}
+main#home section.hero > .hero-art:after {
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  background:linear-gradient(0deg,rgba(7,7,15,.25),transparent 38%,rgba(12,8,25,.12)) !important;
+}
+main#home section.hero .hero-copy {
+  width:53% !important;
+  max-width:690px !important;
+  padding:58px 0 42px !important;
+}
+main#home section.hero .eyebrow {
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  padding:9px 13px !important;
+  border:1px solid rgba(222,184,91,.28) !important;
+  border-radius:999px !important;
+  background:rgba(22,17,38,.68) !important;
+  color:#e8c875 !important;
+  font-size:10px !important;
+  letter-spacing:.13em !important;
+}
+main#home section.hero h1 {
+  margin:20px 0 17px !important;
+  font-size:clamp(46px,4.7vw,72px) !important;
+  line-height:1.015 !important;
+  letter-spacing:-.045em !important;
+  text-wrap:balance !important;
+}
+main#home section.hero .dream.gold {
+  display:inline !important;
+  color:#edc96f !important;
+  text-shadow:0 0 24px rgba(224,177,71,.12) !important;
+}
+main#home section.hero p {
+  max-width:465px !important;
+  color:#d0ccdc !important;
+  font-size:15px !important;
+  line-height:1.75 !important;
+}
+main#home section.hero .actions { gap:11px !important; margin-top:24px !important; }
+main#home section.hero .actions .btn { min-height:48px !important; border-radius:9px !important; }
+main#home section.hero .pills { margin-top:22px !important; gap:8px !important; }
+main#home section.hero .pill {
+  padding:8px 10px !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  background:rgba(19,17,31,.72) !important;
+  color:#eeeaf7 !important;
+  border-radius:999px !important;
+  font-size:11px !important;
+}
+@media (max-width:1120px) {
+  header.top .brand { min-width:205px !important; }
+  header.top .brand-title { font-size:12px !important; }
+  header.top .nav { gap:9px !important; }
+  header.top .nav a { font-size:11px !important; }
+  header.top .head-cta { padding:11px 12px !important; }
+  main#home section.hero .hero-copy { width:57% !important; }
+}
+@media (max-width:900px) {
+  header.top .head { min-height:76px !important; }
+  header.top .brand { min-width:0 !important; max-width:calc(100% - 58px) !important; }
+  header.top .head > .nav,
+  header.top .head > .head-cta { display:none !important; }
+  header.top .head > .menu { display:inline-flex !important; margin-left:auto !important; }
+  header.top > nav#mobileNav.mobile-nav.open {
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:8px !important;
+    padding:10px 0 16px !important;
+  }
+  main#home section.hero { min-height:0 !important; }
+  main#home section.hero > .hero-art {
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    background:
+      linear-gradient(90deg,rgba(7,8,17,.96) 0%,rgba(7,8,17,.78) 50%,rgba(7,8,17,.38) 100%),
+      linear-gradient(0deg,rgba(7,8,17,.97) 0%,rgba(7,8,17,.05) 74%),
+      url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 62% center / cover no-repeat !important;
+  }
+  main#home section.hero .hero-copy {
+    width:100% !important;
+    max-width:700px !important;
+    padding:46px 0 38px !important;
+  }
+  main#home section.hero h1 { max-width:630px !important; }
+}
+@media (max-width:520px) {
+  header.top .head { min-height:70px !important; }
+  header.top .brand .crest { width:43px !important; height:43px !important; }
+  header.top .brand-title { font-size:11px !important; }
+  header.top .tagline { font-size:10px !important; }
+  header.top > nav#mobileNav.mobile-nav.open { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  main#home section.hero .hero-copy { padding:34px 0 30px !important; }
+  main#home section.hero .eyebrow { font-size:9px !important; letter-spacing:.08em !important; }
+  main#home section.hero h1 { font-size:clamp(36px,10vw,46px) !important; margin:17px 0 14px !important; }
+  main#home section.hero .pills { max-width:100% !important; }
+  main#home section.hero .pill { font-size:10px !important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  main#home section.hero *,
+  header.top * { scroll-behavior:auto !important; animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
