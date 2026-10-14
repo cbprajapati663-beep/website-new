@@ -1068,3 +1068,32 @@ footer{border-top:1px solid rgba(246,198,90,.13)}
   .top .tagline { font-size:7px !important; }
   .service-card { height:90px !important; min-height:90px !important; }
 }
+
+
+/* Pass 23 — force mobile nav closed by default and remove vector showroom layer */
+@media screen and (max-width: 900px) {
+  header.top nav.nav { display:none !important; visibility:hidden !important; }
+  header.top > nav#mobileNav.mobile-nav { display:none !important; visibility:hidden !important; }
+  header.top > nav#mobileNav.mobile-nav.open { display:flex !important; visibility:visible !important; }
+  header.top .head > a.head-cta { display:none !important; }
+  header.top .head { display:flex !important; align-items:center !important; flex-wrap:nowrap !important; }
+}
+@media screen and (max-width: 760px) {
+  main#home section.hero { position:relative !important; overflow:hidden !important; }
+  main#home section.hero > .hero-art {
+    background: 
+      linear-gradient(90deg,rgba(5,6,14,.97) 0%,rgba(5,6,14,.84) 34%,rgba(5,6,14,.25) 100%),
+      linear-gradient(0deg,rgba(5,6,14,.95) 0%,rgba(5,6,14,.05) 62%),
+      url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 62% center / cover no-repeat !important;
+    opacity:1 !important;
+  }
+  main#home section.hero > .hero-art:before { display:none !important; }
+  main#home section.hero .hero-art .hero-car,
+  main#home section.hero .hero-art .showroom,
+  main#home section.hero .hero-art .sign,
+  main#home section.hero .hero-art .skyline,
+  main#home section.hero .hero-art .hero-orbit,
+  main#home section.hero .hero-art .road,
+  main#home section.hero .hero-art .pedestal { display:none !important; }
+  main#home section.hero .hero-copy { padding:28px 0 36px !important; }
+}
