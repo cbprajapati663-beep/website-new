@@ -1410,3 +1410,109 @@ header.top .menu:focus-visible,
 }
 .service-photo img,
 .hero-art .hero-car { background-color:#11101d; }
+
+
+/* Pass 32 — align the actual service-card markup with the agreed compact reference layout */
+section.services .cards {
+  align-items:stretch !important;
+  gap:12px !important;
+}
+section.services .service-card {
+  display:block !important;
+  min-height:168px !important;
+  height:168px !important;
+  isolation:isolate !important;
+  border:1px solid rgba(245,190,66,.28) !important;
+  border-radius:15px !important;
+  background:#0b0c17 !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+section.services .service-card:after {
+  z-index:1 !important;
+  background:linear-gradient(90deg,rgba(7,8,17,.94) 0%,rgba(7,8,17,.70) 48%,rgba(7,8,17,.12) 100%),linear-gradient(0deg,rgba(7,8,17,.76),transparent 65%) !important;
+}
+section.services .service-card .service-photo {
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  overflow:hidden !important;
+  z-index:0 !important;
+}
+section.services .service-card .service-photo img {
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  opacity:.82 !important;
+  mask-image:none !important;
+  transition:transform .35s ease,opacity .35s ease !important;
+}
+section.services .service-card:hover .service-photo img {
+  transform:scale(1.06) !important;
+  opacity:.95 !important;
+}
+section.services .service-card .service-icon { display:none !important; }
+section.services .service-card .service-content {
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:flex-end !important;
+  padding:16px 48px 17px 15px !important;
+}
+section.services .service-card .service-content h3 {
+  position:static !important;
+  transform:none !important;
+  max-width:100% !important;
+  margin:0 !important;
+  color:#fff !important;
+  font:700 14px/1.35 Inter,Arial,sans-serif !important;
+  overflow-wrap:normal !important;
+  text-shadow:0 2px 8px #000 !important;
+}
+section.services .service-card .service-content p,
+section.services .service-card .service-content ul,
+section.services .service-card .service-link { display:none !important; }
+section.services .service-card .service-content:after {
+  content:"↗" !important;
+  position:absolute !important;
+  right:12px !important;
+  bottom:12px !important;
+  width:30px !important;
+  height:30px !important;
+  display:grid !important;
+  place-items:center !important;
+  border:1px solid #f9c34d !important;
+  border-radius:50% !important;
+  background:rgba(8,9,18,.88) !important;
+  color:#ffe6a0 !important;
+  font-size:18px !important;
+  line-height:1 !important;
+  box-shadow:0 3px 14px #0008 !important;
+}
+section.services .service-card:hover {
+  border-color:#f9c34d !important;
+  box-shadow:0 12px 28px #0008,0 0 18px rgba(139,54,216,.22) !important;
+}
+@media (min-width:901px) {
+  section.services .cards { grid-template-columns:repeat(5,minmax(0,1fr)) !important; }
+  section.services .service-card { min-height:158px !important; height:158px !important; }
+  section.services .service-card .service-content { padding:15px 43px 16px 13px !important; }
+  section.services .service-card .service-content h3 { font-size:12px !important; }
+}
+@media (max-width:900px) {
+  section.services .cards { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  section.services .service-card { min-height:142px !important; height:142px !important; }
+}
+@media (max-width:520px) {
+  section.services .cards { gap:9px !important; }
+  section.services .service-card { min-height:126px !important; height:126px !important; border-radius:12px !important; }
+  section.services .service-card .service-content { padding:12px 36px 12px 10px !important; }
+  section.services .service-card .service-content h3 { font-size:11px !important; }
+  section.services .service-card .service-content:after { right:8px !important; bottom:8px !important; width:24px !important; height:24px !important; font-size:15px !important; }
+}
