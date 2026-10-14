@@ -1097,3 +1097,44 @@ footer{border-top:1px solid rgba(246,198,90,.13)}
   main#home section.hero .hero-art .pedestal { display:none !important; }
   main#home section.hero .hero-copy { padding:28px 0 36px !important; }
 }
+
+
+/* Pass 24 — definitive nav visibility and cinematic photographic hero on all screens */
+header.top > nav#mobileNav.mobile-nav { display:none !important; }
+header.top > nav#mobileNav.mobile-nav.open { display:flex !important; }
+@media (min-width: 901px) {
+  header.top > nav#mobileNav.mobile-nav { display:none !important; }
+  header.top .head > button.menu { display:none !important; }
+}
+main#home section.hero { position:relative !important; overflow:hidden !important; isolation:isolate; }
+main#home section.hero > .hero-art {
+  background:
+    linear-gradient(90deg,rgba(5,6,14,.98) 0%,rgba(5,6,14,.90) 28%,rgba(5,6,14,.48) 58%,rgba(5,6,14,.12) 100%),
+    linear-gradient(0deg,rgba(5,6,14,.95) 0%,rgba(5,6,14,.12) 48%,rgba(5,6,14,.32) 100%),
+    url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') center 54% / cover no-repeat !important;
+}
+main#home section.hero > .hero-art:before { display:none !important; }
+main#home section.hero .hero-art .showroom,
+main#home section.hero .hero-art .sign,
+main#home section.hero .hero-art .skyline,
+main#home section.hero .hero-art .hero-orbit,
+main#home section.hero .hero-art .road,
+main#home section.hero .hero-art .pedestal,
+main#home section.hero .hero-art .hero-car { display:none !important; }
+@media (max-width: 900px) {
+  header.top .head > .nav,
+  header.top .head > .head-cta { display:none !important; }
+  header.top .head { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; }
+  header.top > nav#mobileNav.mobile-nav { display:none !important; }
+  header.top > nav#mobileNav.mobile-nav.open { display:flex !important; }
+}
+@media (max-width: 760px) {
+  main#home section.hero > .hero-art {
+    background-position:62% center !important;
+    background:
+      linear-gradient(90deg,rgba(5,6,14,.97) 0%,rgba(5,6,14,.83) 39%,rgba(5,6,14,.26) 100%),
+      linear-gradient(0deg,rgba(5,6,14,.95) 0%,rgba(5,6,14,.08) 58%),
+      url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1800&q=90') 62% center / cover no-repeat !important;
+  }
+  main#home section.hero .hero-copy { padding-bottom:34px !important; }
+}
