@@ -2128,3 +2128,85 @@ main#home section.hero .pill {
     animation: none !important;
   }
 }
+
+
+/* Responsive audit layer — fluid sizing and consistent mobile/tablet behaviour at any zoom. */
+html { max-width: 100%; scroll-padding-top: clamp(72px, 8vw, 100px); }
+body { width: 100%; max-width: 100%; min-width: 0; }
+img, video, canvas, svg { max-width: 100%; }
+.wrap { width: min(1460px, calc(100% - clamp(24px, 4vw, 64px))); }
+section, main, header, footer, .wrap, .head, .brand, .hero-copy, .hero-art,
+.service-heading, .service-content, .tools-grid, .about-grid, .contact-strip,
+.bottom-row, .stats, .cards, .process-grid, .feature-list, .trust-row {
+  min-width: 0;
+}
+h1, h2, h3, h4, p, a, button, label, .brand-title, .tagline {
+  overflow-wrap: anywhere;
+}
+button, input, select, textarea { max-width: 100%; min-width: 0; }
+.brand { min-width: 0; max-width: 100%; }
+.brand-title { white-space: normal; }
+.nav { min-width: 0; flex-wrap: wrap; }
+.hero-copy { min-width: 0; }
+.hero h1 { font-size: clamp(2rem, 4.4vw, 4.2rem); }
+.cards, .process-grid, .feature-list, .stats { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.tools-grid, .about-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.result { grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
+.bottom-row { flex-wrap: wrap; }
+.stats { min-width: 0; }
+.service-card, .process-card, .feature, .tool-card, .contact-strip > * { min-width: 0; }
+@media (min-width: 1201px) {
+  .wrap { width: min(1460px, calc(100% - clamp(40px, 5vw, 96px))); }
+  .head { gap: clamp(12px, 1.5vw, 22px); }
+  .brand { flex: 0 1 auto; }
+  .nav { flex: 1 1 auto; justify-content: flex-end; }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .wrap { width: calc(100% - clamp(28px, 4vw, 48px)); }
+  header.top .head { gap: 12px; }
+  header.top .head > .nav,
+  header.top .head > .head-cta { display: none !important; }
+  header.top .head > .menu { display: inline-flex !important; margin-left: auto !important; }
+  header.top > nav#mobileNav.mobile-nav.open {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .tools-grid, .about-grid { gap: clamp(18px, 3vw, 32px); }
+}
+@media (max-width: 900px) {
+  .wrap { width: calc(100% - clamp(24px, 5vw, 40px)); }
+  .head { min-height: 0; flex-wrap: wrap; }
+  .brand { flex: 1 1 auto; }
+  .nav { display: none; }
+  header.top .head > .menu { display: inline-flex !important; margin-left: auto; }
+  .hero-copy, .hero-art { min-width: 0; max-width: 100%; }
+  .tools-grid, .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-strip, .bottom-row { align-items: stretch; flex-direction: column; }
+  .contact-strip { padding: clamp(16px, 4vw, 28px); }
+  .trust-row { grid-template-columns: minmax(0, 1fr); }
+  .trust-item { border-right: 0; border-bottom: 1px solid #ffffff13; padding: 10px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cards, .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .result { grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)); }
+}
+@media (max-width: 520px) {
+  .wrap { width: calc(100% - 24px); }
+  .head { padding-block: 10px; }
+  .brand { gap: 8px; }
+  .crest { flex: 0 0 auto; width: clamp(54px, 16vw, 72px); height: clamp(48px, 14vw, 62px); }
+  .crest i { font-size: clamp(22px, 6vw, 30px); }
+  .crest small { top: 58%; font-size: 5px; }
+  .brand-title { font-size: clamp(13px, 3.8vw, 17px); line-height: 1.2; }
+  .tagline { font-size: clamp(10px, 2.8vw, 12px); }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.7rem); }
+  .actions { gap: 10px; }
+  .actions .btn, .btn { max-width: 100%; white-space: normal; }
+  .cards, .process-grid, .feature-list, .stats { grid-template-columns: minmax(0, 1fr); }
+  .result { grid-template-columns: minmax(0, 1fr); }
+  .whatsapp, .phone { min-width: 0; max-width: 100%; }
+  .stat { justify-content: flex-start; border-right: 0; padding: 10px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
